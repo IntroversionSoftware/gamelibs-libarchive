@@ -1,3 +1,6 @@
+/obj
+/.cflags
+*.a
 *~
 *.o
 *.obj
@@ -11,8 +14,7 @@
 *.sln
 *.tlog
 *.cmake
-*.vcxproj
-*.vcxproj.filters
+*.vcxproj.user
 !build/cmake/*.cmake
 .deps/
 .libs/
