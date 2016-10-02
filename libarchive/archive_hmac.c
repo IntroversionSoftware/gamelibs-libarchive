@@ -110,7 +110,7 @@ __hmac_sha1_init(archive_hmac_sha1_ctx *ctx, const uint8_t *key, size_t key_len)
 		return -1;
 	}
 	status = BCryptCreateHash(hAlg, &hHash, NULL, 0,
-		(PUCHAR)key, (ULONG)key_len, BCRYPT_HASH_REUSABLE_FLAG);
+		(PUCHAR)key, (ULONG)key_len, 0);
 	if (!BCRYPT_SUCCESS(status)) {
 		BCryptCloseAlgorithmProvider(hAlg, 0);
 		HeapFree(GetProcessHeap(), 0, hash);

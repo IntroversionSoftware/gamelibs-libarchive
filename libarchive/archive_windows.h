@@ -60,6 +60,9 @@
 #if defined(HAVE_STDINT_H)
 #include <stdint.h>
 #endif
+#if defined(HAVE_PSTDINT_H)
+#include <pstdint.h>
+#endif
 #include <stdio.h>
 #include <fcntl.h>
 #include <sys/stat.h>
