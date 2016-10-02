@@ -1,9 +1,13 @@
+/obj
+/.cflags
+*.a
 *~
 *.o
 *.exe
 *.la
 *.lo
 *.cmake
+*.vcxproj.user
 !build/cmake/*.cmake
 .deps/
 .libs/
