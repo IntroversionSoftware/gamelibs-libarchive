@@ -7,6 +7,7 @@
 *.la
 *.lo
 *.cmake
+*.vcxproj.user
 !build/cmake/*.cmake
 .deps/
 .libs/

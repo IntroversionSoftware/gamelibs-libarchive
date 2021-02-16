@@ -1256,7 +1256,7 @@ zip_read_local_file_header(struct archive_read *a, struct archive_entry *entry,
 			// symlink target string appeared to be compressed
 			int status = ARCHIVE_FATAL;
 			char *uncompressed_buffer =
-				(char*) malloc(zip_entry->uncompressed_size);
+				(char*) malloc((size_t)zip_entry->uncompressed_size);
 			if (uncompressed_buffer == NULL)
 			{
 				archive_set_error(&a->archive, ENOMEM,
