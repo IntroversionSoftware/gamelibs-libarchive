@@ -280,7 +280,7 @@
     <ClCompile Include="xxhash.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\zlib\projects\visualc2005\zlib.vcxproj">
+    <ProjectReference Include="..\..\zlib\projects\msvc\zlib.vcxproj">
       <Project>{3d9f174b-2909-4834-a3d7-892e8d442a5d}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
