@@ -4,6 +4,9 @@
  * Ensure we have C99-style int64_t, etc, all defined.
  */
 
+#define __LIBARCHIVE_CONFIG_H_INCLUDED
+#define LIBARCHIVE_STATIC
+
 /* First, we need to know if the system has already defined them. */
 #define HAVE_INT16_T
 #define HAVE_INT32_T
@@ -568,7 +571,7 @@ typedef uint64_t uintmax_t;
 /* #undef HAVE_ICONV_H */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-/* #undef HAVE_INTTYPES_H */
+#define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the <io.h> header file. */
 #define HAVE_IO_H 1
