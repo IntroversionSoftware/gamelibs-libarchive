@@ -460,7 +460,9 @@ typedef uint64_t uintmax_t;
 
 /* Define to 1 if you have the declaration of `SSIZE_MAX', and to 0 if you
    don't. */
-/* #undef HAVE_DECL_SSIZE_MAX */
+#ifdef __MINGW32__
+#define HAVE_DECL_SSIZE_MAX 1
+#endif
 
 /* Define to 1 if you have the declaration of `strerror_r', and to 0 if you
    don't. */
@@ -1320,7 +1322,9 @@ typedef uint64_t uintmax_t;
 #define id_t short
 
 /* Define to `int' if <sys/types.h> does not define. */
+#if !defined(__MINGW32__)
 #define mode_t unsigned short
+#endif
 
 /* Define to `long long' if <sys/types.h> does not define. */
 /* #undef off_t */

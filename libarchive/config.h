@@ -1,4 +1,4 @@
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) || defined(__MINGW32__)
 #include "config_windows.h"
 #elif defined(__linux__)
 #include "config_linux.h"
