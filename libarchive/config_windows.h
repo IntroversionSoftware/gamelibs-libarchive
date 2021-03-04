@@ -3,6 +3,10 @@
 
 #define LIBARCHIVE_STATIC
 
+#if defined(_MSC_VER)
+// warning C4267: 'initializing': conversion from 'size_t' to 'long', possible loss of data
+#  pragma warning (disable: 4267)
+#endif
 /*
  * Ensure we have C99-style int64_t, etc, all defined.
  */
