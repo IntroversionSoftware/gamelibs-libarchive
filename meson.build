@@ -7,6 +7,13 @@ incdirs = ['libarchive']
 
 c_flags = ['-DHAVE_CONFIG_H']
 
+if target_machine.system() == 'windows'
+    win = import('windows')
+    link_deps += [
+        compiler.find_library('mincore'),
+    ]
+endif
+
 sources = [
   'libarchive/archive_acl.c',
   'libarchive/archive_blake2sp_ref.c',
