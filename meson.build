@@ -1,7 +1,9 @@
 project('libarchive', 'c', version: '3.5.1')
 
 compiler = meson.get_compiler('c')
-link_deps = []
+link_deps = [
+    dependency('zlib'),
+]
 
 incdirs = ['libarchive']
 
