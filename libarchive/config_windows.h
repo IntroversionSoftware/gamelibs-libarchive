@@ -1,7 +1,9 @@
 /* config.h.  Generated from build/cmake/config.h.in by cmake configure */
 #define __LIBARCHIVE_CONFIG_H_INCLUDED 1
 
+#ifndef LIBARCHIVE_STATIC
 #define LIBARCHIVE_STATIC
+#endif
 
 #if defined(_MSC_VER)
 // warning C4267: 'initializing': conversion from 'size_t' to 'long', possible loss of data
