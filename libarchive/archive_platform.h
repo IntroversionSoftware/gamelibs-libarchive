@@ -210,4 +210,36 @@
 #define	__LA_FALLTHROUGH
 #endif
 
+#define ARCHIVE_USE_JEMALLOC
+#ifdef ARCHIVE_USE_JEMALLOC
+
+#include <stddef.h>
+#include <string.h>
+
+extern void * __LA_LIBC_CC je_malloc(size_t size);
+extern void * __LA_LIBC_CC je_calloc(size_t num, size_t size);
+extern void * __LA_LIBC_CC je_realloc(void *ptr, size_t size);
+extern void   __LA_LIBC_CC je_free(void *ptr);
+
+static inline char *je_strdup(const char *_in) {
+	size_t len = strlen(_in);
+	char *ptr = je_malloc(len+1);
+	memcpy(ptr, _in, len);
+	ptr[len] = 0;
+	return ptr;
+}
+
+#undef malloc
+#undef calloc
+#undef strdup
+#undef realloc
+#undef free
+
+#define malloc je_malloc
+#define calloc je_calloc
+#define strdup je_strdup
+#define realloc je_realloc
+#define free je_free
+#endif
+
 #endif /* !ARCHIVE_PLATFORM_H_INCLUDED */
