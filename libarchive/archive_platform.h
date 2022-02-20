@@ -215,4 +215,33 @@
 #define	__LA_FALLTHROUGH
 #endif
 
+#if defined(USE_JEMALLOC) || defined(USE_MIMALLOC) || defined(USE_WINHEAP)
+
+#include <stddef.h>
+#include <string.h>
+
+#ifndef CDECL
+#define CDECL __LA_LIBC_CC
+#endif
+
+extern void *CDECL internal_alloc(size_t count);
+extern void *CDECL internal_calloc(size_t num, size_t size);
+extern void *CDECL internal_realloc(void *ptr, size_t count);
+extern char *CDECL internal_strdup(const char *ptr);
+extern void CDECL internal_free(void *ptr);
+
+#undef malloc
+#undef calloc
+#undef strdup
+#undef realloc
+#undef free
+
+#define malloc internal_alloc
+#define calloc internal_calloc
+#define strdup internal_strdup
+#define _strdup internal_strdup
+#define realloc internal_realloc
+#define free internal_free
+#endif
+
 #endif /* !ARCHIVE_PLATFORM_H_INCLUDED */
