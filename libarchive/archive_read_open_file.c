@@ -57,7 +57,7 @@ struct read_FILE_data {
 };
 
 static int	file_close(struct archive *, void *);
-static ssize_t	file_read(struct archive *, void *, const void **buff);
+static la_ssize_t	file_read(struct archive *, void *, const void **buff);
 static int64_t	file_skip(struct archive *, void *, int64_t request);
 
 int
@@ -104,11 +104,11 @@ archive_read_open_FILE(struct archive *a, FILE *f)
 	return (archive_read_open1(a));
 }
 
-static ssize_t
+static la_ssize_t
 file_read(struct archive *a, void *client_data, const void **buff)
 {
 	struct read_FILE_data *mine = (struct read_FILE_data *)client_data;
-	size_t bytes_read;
+	la_ssize_t bytes_read;
 
 	*buff = mine->buffer;
 	bytes_read = fread(mine->buffer, 1, mine->block_size, mine->f);
