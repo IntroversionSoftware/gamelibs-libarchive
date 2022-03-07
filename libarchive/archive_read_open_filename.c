@@ -86,7 +86,7 @@ static int	file_open(struct archive *, void *);
 static int	file_close(struct archive *, void *);
 static int file_close2(struct archive *, void *);
 static int file_switch(struct archive *, void *, void *);
-static ssize_t	file_read(struct archive *, void *, const void **buff);
+static la_ssize_t	file_read(struct archive *, void *, const void **buff);
 static int64_t	file_seek(struct archive *, void *, int64_t request, int);
 static int64_t	file_skip(struct archive *, void *, int64_t request);
 static int64_t	file_skip_lseek(struct archive *, void *, int64_t request);
@@ -414,11 +414,11 @@ fail:
 	return (ARCHIVE_FATAL);
 }
 
-static ssize_t
+static la_ssize_t
 file_read(struct archive *a, void *client_data, const void **buff)
 {
 	struct read_file_data *mine = (struct read_file_data *)client_data;
-	ssize_t bytes_read;
+	la_ssize_t bytes_read;
 
 	/* TODO: If a recent lseek() operation has left us
 	 * mis-aligned, read and return a short block to try to get
