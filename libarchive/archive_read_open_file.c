@@ -118,7 +118,7 @@ FILE_read(struct archive *a, void *client_data, const void **buff)
 	if (bytes_read < mine->block_size && ferror(mine->f)) {
 		archive_set_error(a, errno, "Error reading file");
 	}
-	return (bytes_read);
+	return (la_ssize_t)(bytes_read);
 }
 
 static int64_t
