@@ -53,7 +53,9 @@ __FBSDID("$FreeBSD$");
 #include <linux/magic.h>
 #endif
 #ifdef HAVE_LINUX_FS_H
+#if !__GLIBC_PREREQ(2, 36)
 #include <linux/fs.h>
+#endif
 #endif
 /*
  * Some Linux distributions have both linux/ext2_fs.h and ext2fs/ext2_fs.h.
