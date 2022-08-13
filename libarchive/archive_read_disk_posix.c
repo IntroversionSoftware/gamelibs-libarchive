@@ -52,9 +52,9 @@ __FBSDID("$FreeBSD$");
 #ifdef HAVE_LINUX_FS_H
 #if !__GLIBC_PREREQ(2, 36)
 #include <linux/fs.h>
+#endif
 #elif HAVE_SYS_MOUNT_H
 #include <sys/mount.h>
-#endif
 #endif
 /*
  * Some Linux distributions have both linux/ext2_fs.h and ext2fs/ext2_fs.h.
