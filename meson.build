@@ -11,7 +11,7 @@ incdirs = ['libarchive']
 c_flags = ['-DHAVE_CONFIG_H']
 
 if get_option('default_library') == 'static'
-	c_flags += '-DLIBARCHIVE_STATIC'
+    c_flags += '-DLIBARCHIVE_STATIC'
 endif
 
 if target_machine.system() == 'windows'
@@ -164,7 +164,7 @@ libarchive_lib = library(
 )
 
 libarchive_dep = declare_dependency(
-	compile_args: c_flags,
+    compile_args: c_flags,
     include_directories: incdirs,
     dependencies: link_deps,
     link_with: libarchive_lib,
