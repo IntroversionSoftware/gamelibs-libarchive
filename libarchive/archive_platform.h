@@ -215,8 +215,7 @@
 #define	__LA_FALLTHROUGH
 #endif
 
-#define ARCHIVE_USE_JEMALLOC
-#ifdef ARCHIVE_USE_JEMALLOC
+#ifdef USE_JEMALLOC
 
 #include <stddef.h>
 #include <string.h>
