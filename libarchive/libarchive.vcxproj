@@ -57,11 +57,9 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\crisscross\source\crisscross;$(ProjectDir)\..\..\zstd\lib;$(ProjectDir)\..\..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>
-        ..\..\zlib\;
-        %(AdditionalIncludeDirectories)
-      </AdditionalIncludeDirectories>
+      <PrecompiledHeader />
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
