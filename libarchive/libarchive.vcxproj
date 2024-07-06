@@ -193,6 +193,7 @@
     <ClCompile Include="archive_write_add_filter_program.c" />
     <ClCompile Include="archive_write_add_filter_uuencode.c" />
     <ClCompile Include="archive_write_add_filter_xz.c" />
+    <ClCompile Include="archive_write_add_filter_zstd.c" />
     <ClCompile Include="archive_write_disk_posix.c" />
     <ClCompile Include="archive_write_disk_set_standard_lookup.c" />
     <ClCompile Include="archive_write_disk_windows.c" />
@@ -205,7 +206,9 @@
     <ClCompile Include="archive_write_set_format_ar.c" />
     <ClCompile Include="archive_write_set_format_by_name.c" />
     <ClCompile Include="archive_write_set_format_cpio.c" />
+    <ClCompile Include="archive_write_set_format_cpio_binary.c" />
     <ClCompile Include="archive_write_set_format_cpio_newc.c" />
+    <ClCompile Include="archive_write_set_format_cpio_odc.c" />
     <ClCompile Include="archive_write_set_format_filter_by_ext.c" />
     <ClCompile Include="archive_write_set_format_gnutar.c" />
     <ClCompile Include="archive_write_set_format_iso9660.c" />
