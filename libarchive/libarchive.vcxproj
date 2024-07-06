@@ -77,13 +77,17 @@
     <ClInclude Include="archive_entry_private.h" />
     <ClInclude Include="archive_getdate.h" />
     <ClInclude Include="archive_hmac_private.h" />
+    <ClInclude Include="archive_openssl_evp_private.h" />
+    <ClInclude Include="archive_openssl_hmac_private.h" />
     <ClInclude Include="archive_options_private.h" />
     <ClInclude Include="archive_pack_dev.h" />
     <ClInclude Include="archive_pathmatch.h" />
     <ClInclude Include="archive_platform.h" />
+    <ClInclude Include="archive_platform_acl.h" />
+    <ClInclude Include="archive_platform_xattr.h" />
+    <ClInclude Include="archive_ppmd_private.h" />
     <ClInclude Include="archive_ppmd7_private.h" />
     <ClInclude Include="archive_ppmd8_private.h" />
-    <ClInclude Include="archive_ppmd_private.h" />
     <ClInclude Include="archive_private.h" />
     <ClInclude Include="archive_random_private.h" />
     <ClInclude Include="archive_rb.h" />
@@ -94,20 +98,27 @@
     <ClInclude Include="archive_windows.h" />
     <ClInclude Include="archive_write_disk_private.h" />
     <ClInclude Include="archive_write_private.h" />
+    <ClInclude Include="archive_write_set_format_private.h" />
     <ClInclude Include="archive_xxhash.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="config_freebsd.h" />
+    <ClInclude Include="config_linux.h" />
+    <ClInclude Include="config_macosx.h" />
     <ClInclude Include="config_windows.h" />
     <ClInclude Include="filter_fork.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="archive_acl.c" />
-    <ClCompile Include="archive_blake2sp_ref.c" />
     <ClCompile Include="archive_blake2s_ref.c" />
+    <ClCompile Include="archive_blake2sp_ref.c" />
     <ClCompile Include="archive_check_magic.c" />
     <ClCompile Include="archive_cmdline.c" />
     <ClCompile Include="archive_cryptor.c" />
     <ClCompile Include="archive_digest.c" />
+    <ClCompile Include="archive_disk_acl_darwin.c" />
+    <ClCompile Include="archive_disk_acl_freebsd.c" />
+    <ClCompile Include="archive_disk_acl_linux.c" />
+    <ClCompile Include="archive_disk_acl_sunos.c" />
     <ClCompile Include="archive_entry.c" />
     <ClCompile Include="archive_entry_copy_bhfi.c" />
     <ClCompile Include="archive_entry_copy_stat.c" />
@@ -143,6 +154,7 @@
     <ClCompile Include="archive_read_set_format.c" />
     <ClCompile Include="archive_read_set_options.c" />
     <ClCompile Include="archive_read_support_filter_all.c" />
+    <ClCompile Include="archive_read_support_filter_by_code.c" />
     <ClCompile Include="archive_read_support_filter_bzip2.c" />
     <ClCompile Include="archive_read_support_filter_compress.c" />
     <ClCompile Include="archive_read_support_filter_grzip.c" />
@@ -176,6 +188,7 @@
     <ClCompile Include="archive_string.c" />
     <ClCompile Include="archive_string_sprintf.c" />
     <ClCompile Include="archive_util.c" />
+    <ClCompile Include="archive_version_details.c" />
     <ClCompile Include="archive_virtual.c" />
     <ClCompile Include="archive_windows.c" />
     <ClCompile Include="archive_write.c" />
