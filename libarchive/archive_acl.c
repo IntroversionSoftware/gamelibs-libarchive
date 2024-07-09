@@ -660,7 +660,7 @@ archive_acl_text_len(struct archive_acl *acl, int want_type, int flags,
  * the type and style of the generated ACL.
  */
 wchar_t *
-archive_acl_to_text_w(struct archive_acl *acl, ssize_t *text_len, int flags,
+archive_acl_to_text_w(struct archive_acl *acl, la_ssize_t *text_len, int flags,
     struct archive *a)
 {
 	int count;
@@ -893,7 +893,7 @@ append_entry_w(wchar_t **wp, const wchar_t *prefix, int type,
  * the type and style of the generated ACL.
  */
 char *
-archive_acl_to_text_l(struct archive_acl *acl, ssize_t *text_len, int flags,
+archive_acl_to_text_l(struct archive_acl *acl, la_ssize_t *text_len, int flags,
     struct archive_string_conv *sc)
 {
 	int count;
