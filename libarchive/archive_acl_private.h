@@ -65,9 +65,9 @@ int archive_acl_add_entry_w_len(struct archive_acl *,
 int archive_acl_add_entry_len(struct archive_acl *,
     int, int, int, int, const char *, size_t);
 
-wchar_t *archive_acl_to_text_w(struct archive_acl *, ssize_t *, int,
+wchar_t *archive_acl_to_text_w(struct archive_acl *, la_ssize_t *, int,
     struct archive *);
-char *archive_acl_to_text_l(struct archive_acl *, ssize_t *, int,
+char *archive_acl_to_text_l(struct archive_acl *, la_ssize_t *, int,
     struct archive_string_conv *);
 
 /*
