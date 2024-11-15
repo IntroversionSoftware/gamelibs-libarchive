@@ -607,9 +607,11 @@
 /* Define to 1 if you have the `zstd' library (-lzstd). */
 #define HAVE_LIBZSTD 1
 
-/* Define to 1 if you have the `zstd' library (-lzstd) with compression
-   support. */
-#define HAVE_LIBZSTD_COMPRESSOR 1
+/* Define to 1 if you have the ZSTD_compressStream function. */
+#define HAVE_ZSTD_compressStream 1
+
+/* Define to 1 if you have the ZSTD_minCLevel function. */
+#define HAVE_ZSTD_minCLevel 1
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
