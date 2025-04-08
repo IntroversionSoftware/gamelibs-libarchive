@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <ItemGroup>
     <ClCompile Include="archive_acl.c" />
     <ClCompile Include="archive_blake2s_ref.c" />
@@ -80,6 +80,7 @@
     <ClCompile Include="archive_read_support_format_zip.c" />
     <ClCompile Include="archive_string.c" />
     <ClCompile Include="archive_string_sprintf.c" />
+    <ClCompile Include="archive_time.c" />
     <ClCompile Include="archive_util.c" />
     <ClCompile Include="archive_version_details.c" />
     <ClCompile Include="archive_virtual.c" />
@@ -156,9 +157,9 @@
     <ClInclude Include="archive_platform.h" />
     <ClInclude Include="archive_platform_acl.h" />
     <ClInclude Include="archive_platform_xattr.h" />
-    <ClInclude Include="archive_ppmd_private.h" />
     <ClInclude Include="archive_ppmd7_private.h" />
     <ClInclude Include="archive_ppmd8_private.h" />
+    <ClInclude Include="archive_ppmd_private.h" />
     <ClInclude Include="archive_private.h" />
     <ClInclude Include="archive_random_private.h" />
     <ClInclude Include="archive_rb.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="archive_read_private.h" />
     <ClInclude Include="archive_string.h" />
     <ClInclude Include="archive_string_composition.h" />
+    <ClInclude Include="archive_time_private.h" />
     <ClInclude Include="archive_windows.h" />
     <ClInclude Include="archive_write_disk_private.h" />
     <ClInclude Include="archive_write_private.h" />
