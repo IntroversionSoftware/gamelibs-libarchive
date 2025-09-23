@@ -20,7 +20,6 @@
     <ClCompile Include="archive_entry_stat.c" />
     <ClCompile Include="archive_entry_strmode.c" />
     <ClCompile Include="archive_entry_xattr.c" />
-    <ClCompile Include="archive_getdate.c" />
     <ClCompile Include="archive_hmac.c" />
     <ClCompile Include="archive_match.c" />
     <ClCompile Include="archive_options.c" />
@@ -147,7 +146,6 @@
     <ClInclude Include="archive_entry.h" />
     <ClInclude Include="archive_entry_locale.h" />
     <ClInclude Include="archive_entry_private.h" />
-    <ClInclude Include="archive_getdate.h" />
     <ClInclude Include="archive_hmac_private.h" />
     <ClInclude Include="archive_openssl_evp_private.h" />
     <ClInclude Include="archive_openssl_hmac_private.h" />
