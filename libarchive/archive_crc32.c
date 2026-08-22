@@ -40,7 +40,7 @@
  * detection would make generic AArch64 binaries unsafe on older CPUs.
  */
 
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) && !defined(__clang__)
 #include <arm64_acle.h>
 #elif defined(__GNUC__) || defined(__clang__)
 #include <arm_acle.h>
