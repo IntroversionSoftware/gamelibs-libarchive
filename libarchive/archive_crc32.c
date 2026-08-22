@@ -36,7 +36,7 @@
  * Available on 64-bit ARM platforms with CRC extension support.
  */
 
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) && !defined(__clang__)
 #include <arm64_acle.h>
 #elif defined(__GNUC__) || defined(__clang__)
 #if !defined(__ARM_FEATURE_CRC32) && !(defined(__APPLE__) && defined(__MACH__))
