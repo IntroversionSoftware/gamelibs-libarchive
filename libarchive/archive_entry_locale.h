@@ -61,9 +61,9 @@ int archive_entry_uname_l(struct archive_entry *,
     const char **, size_t *, struct archive_string_conv *);
 #define archive_entry_acl_text_l __archive_entry_acl_text_l
 int archive_entry_acl_text_l(struct archive_entry *, int,
-    const char **, size_t *, struct archive_string_conv *) __LA_DEPRECATED;
+    const char **, la_ssize_t *, struct archive_string_conv *) __LA_DEPRECATED;
 #define archive_entry_acl_to_text_l __archive_entry_acl_to_text_l
-char *archive_entry_acl_to_text_l(struct archive_entry *, ssize_t *, int,
+char *archive_entry_acl_to_text_l(struct archive_entry *, la_ssize_t *, int,
     struct archive_string_conv *);
 #define archive_entry_acl_from_text_l __archive_entry_acl_from_text_l
 int archive_entry_acl_from_text_l(struct archive_entry *, const char* text,
