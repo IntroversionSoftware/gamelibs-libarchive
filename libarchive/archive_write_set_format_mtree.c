@@ -1619,9 +1619,6 @@ sum_final(struct mtree *mtree, struct reg_info *reg)
 	struct ae_digest digest;
 #endif
 
-	/* Unused when no ARCHIVE_HAS_* digest is enabled. */
-	(void)digest;
-
 	if (mtree->compute_sum & F_CKSUM) {
 		uint64_t len;
 		/* Include the length of the file. */
